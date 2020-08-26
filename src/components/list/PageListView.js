@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Text,View,FlatList,Dimensions,PanResponder,Animated,Easing,ActivityIndicator} from 'react-native';'
+import {Text,View,FlatList,Dimensions,PanResponder,Animated,Easing,ActivityIndicator} from 'react-native';
 import Styles from 'react-native-gp-style';
 let {s,sf}=new Styles(0);
 

@@ -2,7 +2,7 @@
 import React from 'react';
 import {TextInput, StyleSheet, Animated} from 'react-native';
 import AIcon from 'react-native-vector-icons/AntDesign';
-import { theme } from '@/assets/styles';
+import { Theme } from '@/assets/styles';
 
 interface Props {
   style?: {}, // input 外面包裹的view的样式
@@ -97,7 +97,7 @@ export class Input extends React.Component<Props, State> {
 
     const color = this.interpolatedColor.interpolate({
       inputRange: [0, 1],
-      outputRange: [theme.mainGrayColor, theme.mainColor]
+      outputRange: [Theme.gray666, Theme.ThemeColor]
     });
 
     const AnimatedIcon = Animated.createAnimatedComponent(AIcon);
@@ -131,7 +131,7 @@ export class Input extends React.Component<Props, State> {
               <AIcon
                 name="closecircle"
                 size={clearIconSize}
-                style={{color: theme.mainGrayColor, opacity: 0.8}}
+                style={{color: Theme.gray666, opacity: 0.8}}
                 onPress={this.onClear}
               />
             }

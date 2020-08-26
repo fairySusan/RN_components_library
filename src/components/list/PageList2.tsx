@@ -20,7 +20,7 @@ interface Props {
   const renderLoadMore= () => {
     return (
       <View style={styles.loadingMore}>
-        <ActivityIndicator animating={true} color={Theme.themeColor} />
+        <ActivityIndicator animating={true} color={Theme.ThemeColor} />
         <Text style={styles.loadingMoreText}>正在加载数据...</Text>
       </View>
     )
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   noData: {
     textAlign: 'center',
     marginTop: 20,
-    color: Theme.grayFontColor
+    color: Theme.greyFontColor
   },
   loadingMore: {
     ...CommonSty.flexRowCenter,
@@ -58,17 +58,17 @@ const styles = StyleSheet.create({
     lineHeight: 50
   },
   loadingMoreText: {
-    color: Theme.themeColor,
+    color: Theme.ThemeColor,
     marginLeft: 10,
   },
   noMore: {
-    color: Theme.grayFontColor,
+    color: Theme.greyFontColor,
     textAlign: 'center',
     height: 50,
     lineHeight: 50
   },
   tips: {
-    color: Theme.themeColor,
+    color: Theme.ThemeColor,
     textAlign: 'center'
   }
 })

@@ -1,20 +1,24 @@
 
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import StackNavigation from '@/navigation/StackNavogator';
+import { Provider } from 'react-redux';
+import { getPersistor } from '@rematch/persist';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import NavigationContent from '@/navigation/StackNavogator';
+import store from './store'
+
+const persistor = getPersistor();
 
 function App() {
   return (
-    <NavigationContainer>
-      <StackNavigation></StackNavigation>
-    </NavigationContainer>
+    <Provider store={store}>
+      <SafeAreaProvider>
+        <PersistGate persistor={persistor}>
+          <NavigationContent/>
+        </PersistGate>
+      </SafeAreaProvider>
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  
-});
 
 export default App;

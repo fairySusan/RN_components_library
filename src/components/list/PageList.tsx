@@ -59,7 +59,7 @@ export function PageList(props: Props) {
         isPulling 
         ?
         <View style={styles.loadMore}>
-          <ActivityIndicator animating={true} color={Theme.themeColor}/>
+          <ActivityIndicator animating={true} color={Theme.ThemeColor}/>
           <Text style={styles.loadText}>正在加载...</Text>
         </View>
         :
@@ -81,7 +81,7 @@ export function PageList(props: Props) {
       onEndReachedThreshold={0.01}
       refreshing={refreshing}
       refreshControl={
-        <RefreshControl refreshing={refreshing} colors={[Theme.themeColor]} onRefresh={_onRefresh} />
+        <RefreshControl refreshing={refreshing} colors={[Theme.ThemeColor]} onRefresh={_onRefresh} />
       }
       ListEmptyComponent={emptyComponent}
       ListFooterComponent={footerComponent}
@@ -94,8 +94,8 @@ export function PageList(props: Props) {
 
 const styles = StyleSheet.create({
   tipText: {
-    color: Theme.grayFontColor,
-    fontSize: Theme.themeFontSize,
+    color: Theme.greyFontColor,
+    fontSize: Theme.ThemeFontSize,
     textAlign: 'center',
     flex: 1,
     lineHeight: 60,
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   loadText: {
-    color: Theme.themeColor,
+    color: Theme.ThemeColor,
     marginLeft: 10,
   }
 })

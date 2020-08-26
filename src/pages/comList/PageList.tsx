@@ -34,7 +34,7 @@ function PageListScreen() {
         <TouchableOpacity style={styles.item} key={el.index} onPress={() => {}}>
           <Text style={styles.text}>{el.index}</Text>
           <Text style={styles.text}>{el.item.userName}</Text>
-          <Icon style={styles.arrow} size={22} name='arrowright' color={Theme.grayFontColor}></Icon>
+          <Icon style={styles.arrow} size={22} name='arrowright' color={Theme.greyFontColor}></Icon>
         </TouchableOpacity>
       )}
     />
@@ -45,7 +45,7 @@ export default PageListScreen;
 
 const styles = StyleSheet.create({
   text: {
-    color: Theme.themeFontColor,
+    color: Theme.ThemeFontColor,
     marginLeft: 10,
   },
   item: {

@@ -22,9 +22,9 @@ export function IconList(props: Props) {
       {
         data.map((item:DataItem, i:number) => (
           <TouchableOpacity style={styles.item} key={i} onPress={() => {onPress(item)}}>
-            <Icon name={item.icon} size={22} color={Theme.themeColor}/>
+            <Icon name={item.icon} size={22} color={Theme.ThemeColor}/>
             <Text style={styles.text}>{item.text}</Text>
-            <Icon style={styles.arrow} size={22} name='arrowright' color={Theme.grayFontColor}></Icon>
+            <Icon style={styles.arrow} size={22} name='arrowright' color={Theme.greyFontColor}></Icon>
           </TouchableOpacity>
         ))
       }
@@ -34,7 +34,7 @@ export function IconList(props: Props) {
 
 const styles = StyleSheet.create({
   text: {
-    color: Theme.themeFontColor,
+    color: Theme.ThemeFontColor,
     marginLeft: 10,
   },
   item: {

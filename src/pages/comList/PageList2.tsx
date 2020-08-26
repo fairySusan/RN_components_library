@@ -44,7 +44,7 @@ function PageList2Screen() {
               <TouchableOpacity style={styles.item} key={index} onPress={() => {console.log('touch')}}>
                 <Text style={styles.text}>{index}</Text>
                 <Text style={styles.text}>{item.userName}</Text>
-                <Icon style={styles.arrow} size={22} name='arrowright' color={Theme.grayFontColor}></Icon>
+                <Icon style={styles.arrow} size={22} name='arrowright' color={Theme.greyFontColor}></Icon>
               </TouchableOpacity>
             )}
           />
@@ -59,7 +59,7 @@ function PageList2Screen() {
               <TouchableOpacity style={styles.item} key={index} onPress={() => {console.log('touch')}}>
                 <Text style={styles.text}>{index}</Text>
                 <Text style={styles.text}>{item.userName}</Text>
-                <Icon style={styles.arrow} size={22} name='arrowright' color={Theme.grayFontColor}></Icon>
+                <Icon style={styles.arrow} size={22} name='arrowright' color={Theme.greyFontColor}></Icon>
               </TouchableOpacity>
             )}
           />
@@ -74,7 +74,7 @@ export default PageList2Screen;
 
 const styles = StyleSheet.create({
   text: {
-    color: Theme.themeFontColor,
+    color: Theme.ThemeFontColor,
     marginLeft: 10,
   },
   item: {
