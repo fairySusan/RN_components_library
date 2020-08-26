@@ -14,6 +14,9 @@ function ComList() {
       <IconList 
         data={[{icon:'star', text: '下拉刷新组件2',route: 'pageList2'}]}
         onPress={(item:DataItem) => {navigation.navigate(item.route)}}/>
+      <IconList 
+        data={[{icon:'star', text: 'Input',route: 'input'}]}
+        onPress={(item:DataItem) => {navigation.navigate(item.route)}}/>
     </View>
   )
 }

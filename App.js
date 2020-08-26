@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { getPersistor } from '@rematch/persist';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import NavigationContent from '@/navigation/StackNavogator';
-import store from './store'
+import store from './src/store'
 
 const persistor = getPersistor();
 

@@ -1,13 +1,14 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import { StackHeaderOptions } from '@react-navigation/stack/lib/typescript/src/types';
+import { Theme } from '@/assets/styles';
+import { NavigationContainer } from '@react-navigation/native';
 
 import Main from './TapNavigator';
 import Home from '@/pages/home/Home';
 import PageListscreen from '@/pages/comList/PageList';
 import PageList2screen from '@/pages/comList/PageList2';
-import { Theme } from '@/assets/styles';
-import { NavigationContainer } from '@react-navigation/native';
+import InputScreen from '@/pages/comList/Input';
 
 const Stack = createStackNavigator();
 
@@ -40,6 +41,11 @@ function StackNavigation() {
           name="pageList2"
           component={PageList2screen}
           options={{title: '下拉刷新列表2', ...commomHeader}}
+        />
+        <Stack.Screen
+          name="input"
+          component={InputScreen}
+          options={{title: 'input', ...commomHeader}}
         />
       </Stack.Navigator>
     </NavigationContainer>
