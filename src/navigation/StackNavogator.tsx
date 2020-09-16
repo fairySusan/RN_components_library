@@ -5,9 +5,7 @@ import { Theme } from '@/assets/styles';
 import { NavigationContainer } from '@react-navigation/native';
 
 import Main from './TapNavigator';
-import Home from '@/pages/home/Home';
 import PageListscreen from '@/pages/comList/PageList';
-import PageList2screen from '@/pages/comList/PageList2';
 import InputScreen from '@/pages/comList/Input';
 
 const Stack = createStackNavigator();
@@ -36,11 +34,6 @@ function StackNavigation() {
           name="pageList"
           component={PageListscreen}
           options={{title: '下拉刷新列表', ...commomHeader}}
-        />
-        <Stack.Screen
-          name="pageList2"
-          component={PageList2screen}
-          options={{title: '下拉刷新列表2', ...commomHeader}}
         />
         <Stack.Screen
           name="input"

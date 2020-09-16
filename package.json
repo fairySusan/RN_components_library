@@ -7,7 +7,9 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "cp-android": "code-push release-react MyApp-Android android",
+    "cp-ios": "code-push release-react MyApp-iOS ios"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.10.3",

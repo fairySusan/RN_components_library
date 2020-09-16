@@ -1,9 +1,21 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import codePush from "react-native-code-push";
+import { Text, View } from 'react-native';
+import { IconList } from '@/components';
+import { codePushConfig } from '@/config/CodePush';
+import { CommonSty } from '@/assets/styles';
 
 function User() {
+  const updateManual = () => {
+    codePush.sync(codePushConfig)
+  }
   return (
-    <Text>我</Text>
+    <View style={CommonSty.full}>
+      <IconList
+        data={[{icon: 'sync', text: '检查更新', route: ''}]}
+        onPress={updateManual}
+      />
+    </View>
   )
 }
 
