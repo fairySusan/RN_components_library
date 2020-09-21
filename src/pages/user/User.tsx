@@ -5,8 +5,13 @@ import { Text, View } from 'react-native';
 import { IconList } from '@/components';
 import { codePushConfig } from '@/config/CodePush';
 import { CommonSty } from '@/assets/styles';
+import { WechatUtil } from '@/utils'
 
 function User() {
+  const menus = [
+    {icon: 'enviromento', text: '配置地图', route: 'amap'},
+    {icon: 'chrome', text: '内嵌web网页', route: 'webView'},
+  ]
   const navigation = useNavigation();
   const updateManual = () => {
     codePush.sync(codePushConfig)
@@ -18,8 +23,15 @@ function User() {
         onPress={updateManual}
       />
       <IconList
-        data={[{icon: 'enviromento', text: '配置地图', route: ''}]}
-        onPress={() => navigation.navigate('amap')}
+        data={menus}
+        onPress={(item) => navigation.navigate(item.route)}
+      />
+      <IconList
+        data={[ {icon: 'wechat', text: '打开微信', route: 'webView'}]}
+        onPress={(item) => WechatUtil.toMiniProgram({
+          userName: 'gh_00c06ad944f1',
+          path: '',
+          miniProgramType: 1})}
       />
     </View>
   )
