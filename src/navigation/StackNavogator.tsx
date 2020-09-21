@@ -7,6 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Main from './TapNavigator';
 import PageListscreen from '@/pages/comList/PageList';
 import InputScreen from '@/pages/comList/Input';
+import AmapScreen from '@/pages/user/amap/Amap';
 
 const Stack = createStackNavigator();
 
@@ -25,21 +26,10 @@ function StackNavigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Main">
-        <Stack.Screen
-          name="Main"
-          component={Main}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="pageList"
-          component={PageListscreen}
-          options={{title: '下拉刷新列表', ...commomHeader}}
-        />
-        <Stack.Screen
-          name="input"
-          component={InputScreen}
-          options={{title: 'input', ...commomHeader}}
-        />
+        <Stack.Screen name="Main" component={Main} options={{headerShown: false}}/>
+        <Stack.Screen name="pageList" component={PageListscreen} options={{title: '下拉刷新列表', ...commomHeader}}/>
+        <Stack.Screen name="input" component={InputScreen} options={{title: 'input', ...commomHeader}} />
+        <Stack.Screen name="amap" component={AmapScreen} options={{title: '地图配置', ...commomHeader}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
