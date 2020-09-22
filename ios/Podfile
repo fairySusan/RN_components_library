@@ -9,6 +9,8 @@ target 'learnReactNative' do
   use_react_native!(:path => config["reactNativePath"])
 
   pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+  pod 'react-native-amap-geolocation', :path => '../node_modules/react-native-amap-geolocation/lib/ios'
+  pod 'react-native-amap3d', :path => '../node_modules/react-native-amap3d/lib/ios'
 
   target 'learnReactNativeTests' do
     inherit! :complete

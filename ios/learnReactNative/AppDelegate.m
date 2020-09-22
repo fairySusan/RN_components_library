@@ -11,6 +11,8 @@
 #import <FlipperKitNetworkPlugin/FlipperKitNetworkPlugin.h>
 #import <SKIOSNetworkPlugin/SKIOSNetworkAdapter.h>
 #import <FlipperKitReactPlugin/FlipperKitReactPlugin.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+
 
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
@@ -29,9 +31,8 @@ static void InitializeFlipper(UIApplication *application) {
 {
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);
-  [AMapServices sharedServices].apiKey = @"9a933240b912edd905c7c335d21f414d";
 #endif
-
+  [AMapServices sharedServices].apiKey = @"f15ad60cbb64ada503dc55b184c3245d";
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"learnReactNative"

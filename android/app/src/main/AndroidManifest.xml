@@ -2,6 +2,8 @@
   package="com.learnreactnative">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Android 7 及以上的配置 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
       android:name=".MainApplication"

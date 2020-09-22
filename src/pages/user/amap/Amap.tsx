@@ -40,10 +40,9 @@ function AmapScreen() {
       PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION,
     ]);
     await init({
-      ios: '',
-      android: '9a933240b912edd905c7c335d21f414d'
+      ios: defaultConfig.amapIosKey,
+      android: defaultConfig.amapAddroidKey
     });
-    console.log('coords123');
     Geolocation.getCurrentPosition((coords) => {
       console.log('coords', coords);
     },(error) => {console.log('error', error.code)});
