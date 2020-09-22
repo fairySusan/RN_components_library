@@ -29,6 +29,7 @@ static void InitializeFlipper(UIApplication *application) {
 {
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);
+  [AMapServices sharedServices].apiKey = @"9a933240b912edd905c7c335d21f414d";
 #endif
 
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];

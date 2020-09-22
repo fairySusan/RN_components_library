@@ -5,4 +5,9 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application android:usesCleartextTraffic="true" tools:targetApi="28" tools:ignore="GoogleAppIndexingWarning" />
+    <application>
+      <meta-data
+        android:name="com.amap.api.v2.apikey"
+        android:value="9a933240b912edd905c7c335d21f414d" />
+    </application>
 </manifest>

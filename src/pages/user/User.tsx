@@ -29,9 +29,9 @@ function User() {
       <IconList
         data={[ {icon: 'wechat', text: '打开微信小程序', route: 'webView'}]}
         onPress={(item) => WechatUtil.toMiniProgram({
-          userName: 'gh_00c06ad944f1',
-          path: '',
-          miniProgramType: 1})}
+          userName: 'gh_b5ccca99adf7',
+          path: 'pages/seckill/index',
+          miniProgramType: 0})}
       />
     </View>
   )

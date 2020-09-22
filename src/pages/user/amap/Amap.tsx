@@ -1,7 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Text,View, StyleSheet, Alert } from 'react-native';
 import { MapView, MapType} from 'react-native-amap3d';
 import { CommonSty } from '@/assets/styles';
+import { defaultConfig } from '@/config/config';
+import { PermissionsAndroid } from "react-native";
+import { init, Geolocation } from "react-native-amap-geolocation";
+
 
 
 function AmapScreen() {
@@ -24,6 +28,27 @@ function AmapScreen() {
     },
   ];
   const [time, setTime] = useState(new Date());
+  const [coord, setCoord] = useState({latitude: 39.91095,longitude: 116.37296});
+  useEffect(() => {
+    permission();
+  },[])
+
+  const permission = async () => {
+    console.log('cccc')
+    await PermissionsAndroid.requestMultiple([
+      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+      PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION,
+    ]);
+    await init({
+      ios: '',
+      android: '9a933240b912edd905c7c335d21f414d'
+    });
+    console.log('coords123');
+    Geolocation.getCurrentPosition((coords) => {
+      console.log('coords', coords);
+    },(error) => {console.log('error', error.code)});
+  }
+
   const _onDragEvent = (data:{latitude: number, longitude: number}) => {
     Alert.alert(`${data.latitude}, ${data.longitude}`);
   }
@@ -41,10 +66,9 @@ function AmapScreen() {
       <View style={{flex: 1}}>
         <MapView
          style={StyleSheet.absoluteFill}
-         center={{
-           latitude: 39.91095,
-           longitude: 116.37296,
-         }}
+         locationEnabled={true}
+         onLocation={(nativeEvent) => setCoord({latitude: nativeEvent.latitude,longitude: nativeEvent.longitude})}
+         center={coord}
          mapType={MapType.Night}
         >
           <MapView.Marker

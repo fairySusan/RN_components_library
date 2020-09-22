@@ -28,6 +28,7 @@
     "axios": "^0.19.2",
     "react": "16.13.1",
     "react-native": "0.63.2",
+    "react-native-amap-geolocation": "^1.1.2",
     "react-native-amap3d": "^2.0.2",
     "react-native-code-push": "^6.3.0",
     "react-native-device-info": "^6.0.4",
